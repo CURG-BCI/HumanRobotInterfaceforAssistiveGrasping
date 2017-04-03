@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Human Robot Interface for Assistive Grasping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/simple-sidebar.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+
+
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <!--TOP NAVIGATION MENU-->
+    <row>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Human Robot Interface<br>for Assistive Grasping</a>
+          </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://github.com/CURG-BCI/bci_project"><span class="icon-large icon-github"></span>Source Code on GitHub <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
+              </li>
+              <li>
+                <a target="_blank" href="http://www.cs.columbia.edu/robotics/"><span class="icon-large icon-github"></span>Columbia University Robotics Group <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </row>
+
+    <!--SIDE NAVIGATION MENU-->
+    <!--div id="side_bar-placeholder"></div-->
+    
+    <div id="main" class="row" style="overflow:auto;">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <br />
+        <br />
+        <br />
+        <center>
+          <h1>Human Robot Interface for Assistive Grasping</h1>
+          <p>
+            <a target="_blank" href="http://davidwa.tkins.me">David Watkins <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>, 
+            <a target="_blank" href="https://www.linkedin.com/in/chaiwen">Chaiwen Chou <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>, Caroline Weinberg, 
+            <a target="_blank" href="http://www.cs.columbia.edu/~jvarley/">Jacob Varley <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>, 
+            <a target="_blank" href="https://www.linkedin.com/in/ixjlyons/">Kenneth Lyons <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>,
+            <a target="_blank" href="https://faculty.engineering.ucdavis.edu/joshi/">Sanjay Joshi <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>,
+            Lynne Weber,
+            <a target="_blank" href="http://www.cumc.columbia.edu/rehab/profile/jstein">Joel Stein <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>,
+            and <a target="_blank" href="http://www.cs.columbia.edu/~allen/">Peter Allen <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a><br>
+          <p>
+          <!--
+            <p>David Watkins, Chaiwen Chou, Caroline Weinberg,  Jacob Varley, Kenneth Lyons, Sanjay Joshi, Lynne Weber, Joel Stein, Peter Allen<p>
+          -->
+          <p style="color:#aaa; margin-bottom: 20px">Columbia University Robotics Group</p>
+        </center>
+        <div class="well well-sm" style="margin-top: 20px;">
+          <h3>Abstract</h3>
+          <p>
+            This work describes a new human-in-the-loop (HitL) assistive grasping system for individuals with varying levels of physical capabilities. We investigated the feasibility of using four potential input devices with our assistive grasping system interface, using able-bodied individuals to define a set of quantitative metrics that could be used to assess an  assistive grasping system. We then took these measurements and created a generalized benchmark for evaluating the effectiveness of any arbitrary input device into a HitL grasping system. The four input devices were a mouse, a speech recognition device, an assistive switch, and a novel sEMG device developed by our group that was connected either to the forearm or behind the ear of the subject. These preliminary results provide insight into how different interface devices perform for generalized assistive grasping tasks and also highlight the potential of sEMG based control for severely disabled individuals. 
+          </p>
+          <br/>
+          <center>
+            <a href="www.cs.columbia.edu/~allen/PAPERS/iser2012.pdf">
+              <img style="max-width:1000px" width="100%" src="grasping_with_your_face.jpg" alt="Grasping with your face" />
+            </a>
+            <p><strong>Grasping With Your Face</strong></p>
+          </center>
+          <br>
+          <center>
+            <br>
+            <a href="www.cs.columbia.edu/~allen/PAPERS/weisz_iros13.pdf">
+              <img src="grasping_with_your_face.jpg" alt="User interface for assistive grasping" style="max-width:500px" width="100%">
+            </a>
+            <p><strong>A User Interface for Assistive Grasping</strong></p>
+          </center>
+        </div>
+        <div class="well well-sm">
+          <h3>Completion Examples</h3>
+          <p>In our <a href="/toy_poisson_019/completion_example.html">Completion Examples</a> page you'll find some shape completions generated by our technique using the feature preserving post processing, and the corresponding ground truth meshes. The page also shows grasps planned on the completed meshes.</p>
+        </div>
+        <div class="well well-sm">
+          <h3>Video</h3>
+          <center>
+            <div id="ytplayer" style="max-width: 550px"></div>
+            <script>
+              // Load the IFrame Player API code asynchronously.
+              var tag = document.createElement('script');
+              tag.src = "https://www.youtube.com/player_api";
+              var firstScriptTag = document.getElementsByTagName('script')[0];
+              firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+              // Replace the 'ytplayer' element with an <iframe> and
+              // YouTube player after the API code downloads.
+              var player;
+              function onYouTubePlayerAPIReady() {
+                player = new YT.Player('ytplayer', {
+                  height: '390',
+                  width: '100%',
+                  videoId: 'Dxd0ItPhh7c'
+                });
+              }
+            </script>
+          </center>
+        </div>
+        <div class="well well-sm">
+          <h3>Downloads</h3>
+          <h4>Source code</h4>
+          <p>
+            <a target="_blank" href="https://github.com/ShapeCompletion3D">https://github.com/ShapeCompletion3D <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
+          </p>
+          <h4>Trained model</h4>
+          <p>
+            <a target="_blank" href="static/y16_m08_d24_h18_m45_grasp_ycb_trained_model.tar.gz">y16_m08_d24_h18_m45_grasp_ycb_trained_model.tar.gz <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
+             <!-- or: -->
+<!--             <br>
+            wget skye.cs.columbia.edu:5000/static/y16_m08_d24_h18_m45_grasp_ycb_trained_model.tar.gz
+            <br> -->
+          </p>
+        </div>
+        <div class="well well-sm">
+          <h3>Citation</h3>
+          This work was submitted to RO-MAN 2017. <a target="_blank" href="https://arxiv.org/pdf/1609.08546v2.pdf">https://arxiv.org/pdf/1609.08546v2.pdf <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
